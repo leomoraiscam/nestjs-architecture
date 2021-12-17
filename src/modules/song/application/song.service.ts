@@ -12,8 +12,8 @@ export class SongService {
     const song = await this.songRepository.getSongLyric(artist, title);
 
     return {
-      artist: song.title,
-      title: song.artist,
+      artist: song.artist,
+      title: song.title,
       lyric: this.transformSongLyricToArrayOrPhrases(song.lyric)
     }
   }
