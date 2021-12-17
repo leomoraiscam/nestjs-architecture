@@ -1,7 +1,12 @@
+import { ApiProperty } from '@nestjs/swagger'
+
 export class SongResponse {
-  artist: string;
+  @ApiProperty({ example: 'blink-182' })
+  artist: string
 
-  title: string;
+  @ApiProperty({ example: 'All The Small Things' })
+  title: string
 
-  lyric: string[];
+  @ApiProperty({ example: ['the lyric', 'of the song'] })
+  lyric: string[]
 }
