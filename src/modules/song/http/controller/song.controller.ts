@@ -1,5 +1,5 @@
 import { Controller, Get, HttpStatus, Query, Res } from '@nestjs/common'
-import { SongService } from '../../application/songService.service';
+import { SongService } from '../../application/song.service';
 import { Response } from 'express';
 
 @Controller('v1/song')
@@ -14,7 +14,6 @@ export class SongController {
   ) {
     console.log('artist', artist)
     console.log('title', title)
-
 
     const lyric = await this.songService.getSongLyric(artist, title);
 
